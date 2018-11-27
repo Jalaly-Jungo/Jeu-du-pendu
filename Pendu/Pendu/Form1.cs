@@ -12,6 +12,9 @@ namespace Pendu
 {
     public partial class Form1 : Form
     {
+        //connection to the database
+        private ConnectionDB conn = new ConnectionDB();
+
         public Form1()
         {
             InitializeComponent();
