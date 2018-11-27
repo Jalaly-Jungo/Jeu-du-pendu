@@ -43,13 +43,13 @@ namespace Pendu
                 m_dbConnection = new SQLiteConnection("Data Source=hanged.sqlite;Version=3;");
                 m_dbConnection.Open();
 
-                //Create and insert ressources
+                //Create and insert word
                 CreateInsertWords();
 
-                //Create and insert cards
+                //Create player
                 CreatePlayers();
 
-                //Create and insert Cost
+                //Create score
                 CreateScores();
             }
         }
