@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pendu", "Pendu\Pendu.csproj", "{C49E4295-D63E-4FEF-A865-F7BE356E2564}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pendu", "Pendu\Pendu.csproj", "{3C4FE13F-79E9-4E3D-AE74-2729847A0CFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C49E4295-D63E-4FEF-A865-F7BE356E2564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C49E4295-D63E-4FEF-A865-F7BE356E2564}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C49E4295-D63E-4FEF-A865-F7BE356E2564}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C49E4295-D63E-4FEF-A865-F7BE356E2564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C4FE13F-79E9-4E3D-AE74-2729847A0CFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C4FE13F-79E9-4E3D-AE74-2729847A0CFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C4FE13F-79E9-4E3D-AE74-2729847A0CFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C4FE13F-79E9-4E3D-AE74-2729847A0CFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1E97719A-0C33-433A-93F3-79174D5B47BE}
+		SolutionGuid = {28012FDE-80D9-4678-A138-1A6685D549B6}
 	EndGlobalSection
 EndGlobal
