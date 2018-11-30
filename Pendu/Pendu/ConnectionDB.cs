@@ -43,13 +43,16 @@ namespace Pendu
                 m_dbConnection = new SQLiteConnection("Data Source=hanged.sqlite;Version=3;");
                 m_dbConnection.Open();
 
-                //Create and insert word
+                //Create and insert words
                 CreateInsertWords();
 
-                //Create player
+                //Create and insert category of words
+                CreateInsertCategory();
+
+                //Create players
                 CreatePlayers();
 
-                //Create score
+                //Create scores
                 CreateScores();
             }
         }
@@ -71,10 +74,23 @@ namespace Pendu
         private void CreateInsertWords()
         {
             //create table of Words
-            doSqlRequest("CREATE TABLE Words (idWord INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, word TEXT NOT NULL UNIQUE, descriptionWord TEXT, discovered BOOLEAN);");
+            doSqlRequest("CREATE TABLE Words (idWord INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, word TEXT NOT NULL UNIQUE, discovered BOOLEAN, fkCategory INTEGER NOT NULL);");
             //Insert Word
-            doSqlRequest("INSERT INTO Words (word) values('Ruby')");
-            doSqlRequest("INSERT INTO Words (word) values('Saphir')");
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('Ruby', 3)");
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('Saphir', 3)");
+        }
+
+        /// <summary>
+        /// create the table "Words" and insert data
+        /// </summary>
+        private void CreateInsertCategory()
+        {
+            //create table of Category
+            doSqlRequest("CREATE TABLE Category (idCategory INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, category TEXT NOT NULL);");
+            //Insert Category
+            doSqlRequest("INSERT INTO Category (category) values('Sport')");
+            doSqlRequest("INSERT INTO Category (category) values('Fruit')");
+            doSqlRequest("INSERT INTO Category (category) values('Pierre')");
         }
 
         /// <summary>
@@ -92,7 +108,7 @@ namespace Pendu
         private void CreateScores()
         {
             //create table of Scores
-            doSqlRequest("CREATE TABLE Scores (idscore INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, score INTEGER NOT NULL);");
+            doSqlRequest("CREATE TABLE Scores (idscore INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, score INTEGER NOT NULL, fkPlayer INTEGER NOT NULL);");
         }
     }
 }
