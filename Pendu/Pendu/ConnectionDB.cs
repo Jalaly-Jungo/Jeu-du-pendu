@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
-
+/*
+    ConnectionDB.cs
+    Inspired by Benoit Meylan (Splandor)
+*/
 namespace Pendu
 {
     /// <summary>
@@ -59,7 +62,6 @@ namespace Pendu
 
         /// <summary>
         /// Exectute SQL request
-        /// by Benoit meylan (Splandor)
         /// </summary>
         /// <param name="sql"> SQL request</param>
         public void doSqlRequest(string sql)
