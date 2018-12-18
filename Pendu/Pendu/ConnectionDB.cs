@@ -78,8 +78,24 @@ namespace Pendu
             //create table of Words
             doSqlRequest("CREATE TABLE Words (idWord INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, word TEXT NOT NULL UNIQUE, discovered BOOLEAN, fkCategory INTEGER NOT NULL);");
             //Insert Word
+                //Sport
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('Football', 1)");
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('Volley-ball', 1)");
+                //Fruit
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('Banane', 2)");
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('Tomate', 2)");
+                //Pierre
             doSqlRequest("INSERT INTO Words (word, fkCategory) values('Ruby', 3)");
             doSqlRequest("INSERT INTO Words (word, fkCategory) values('Saphir', 3)");
+                
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('Opel', 4)");
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('Ford', 4)");
+
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('C#', 5)");
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('Wi-fi', 5)");
+
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('Dwayne Johnson', 6)");
+            doSqlRequest("INSERT INTO Words (word, fkCategory) values('Gérard Depardieu', 6)");
         }
 
         /// <summary>
@@ -92,7 +108,10 @@ namespace Pendu
             //Insert Category
             doSqlRequest("INSERT INTO Category (category) values('Sport')");
             doSqlRequest("INSERT INTO Category (category) values('Fruit')");
-            doSqlRequest("INSERT INTO Category (category) values('Pierre')");
+            doSqlRequest("INSERT INTO Category (category) values('Pierre précieuse')");
+            doSqlRequest("INSERT INTO Category (category) values('Voiture')");
+            doSqlRequest("INSERT INTO Category (category) values('IT')");
+            doSqlRequest("INSERT INTO Category (category) values('Célébrité')");
         }
 
         /// <summary>
