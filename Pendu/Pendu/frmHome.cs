@@ -12,10 +12,19 @@ namespace Pendu
 {
     public partial class frmHome : Form
     {
+        //ConnectionDB
+        private ConnectionDB connDB = new ConnectionDB();
+
         public frmHome()
         {
             InitializeComponent();
         }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+
+        }
+
         /// <summary>
         /// Close the game
         /// </summary>

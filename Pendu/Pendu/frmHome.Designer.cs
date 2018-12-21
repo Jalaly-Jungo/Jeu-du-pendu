@@ -95,7 +95,7 @@
             this.cmdPlay.UseVisualStyleBackColor = true;
             this.cmdPlay.Click += new System.EventHandler(this.cmdPlay_Click);
             // 
-            // Home
+            // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -106,8 +106,9 @@
             this.Controls.Add(this.cmdOrders);
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.lblNameGame);
-            this.Name = "Home";
+            this.Name = "frmHome";
             this.Text = "Jeu du pendu";
+            this.Load += new System.EventHandler(this.frmHome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
