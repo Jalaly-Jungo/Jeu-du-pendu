@@ -25,7 +25,7 @@ namespace Pendu
         {
             frmHome ScoreToHome = new frmHome();//Create Form
             ScoreToHome.Show();//Show new Form
-            this.Hide();//Hide Form
+            this.Close();//Close Form
         }
     }
 }

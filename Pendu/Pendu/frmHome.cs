@@ -32,7 +32,7 @@ namespace Pendu
         /// <param name="e"></param>
         private void cmdClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         /// <summary>
         /// Go to orders

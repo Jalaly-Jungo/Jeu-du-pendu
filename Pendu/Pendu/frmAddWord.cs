@@ -25,7 +25,7 @@ namespace Pendu
         {
             frmHome AddWordsToHome = new frmHome();//Create Form
             AddWordsToHome.Show();//Show new Form
-            this.Hide();//Hide Form
+            this.Close();//Close Form
         }
     }
 }
