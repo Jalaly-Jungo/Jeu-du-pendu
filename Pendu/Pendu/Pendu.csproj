@@ -71,11 +71,11 @@
       <DependentUpon>frmAddWord.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectionDB.cs" />
-    <Compile Include="frmChoiceCategory.cs">
+    <Compile Include="frmGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChoiceCategory.Designer.cs">
-      <DependentUpon>frmChoiceCategory.cs</DependentUpon>
+    <Compile Include="frmGame.Designer.cs">
+      <DependentUpon>frmGame.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
@@ -89,12 +89,6 @@
     <Compile Include="frmOrders.Designer.cs">
       <DependentUpon>frmOrders.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPlay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPlay.Designer.cs">
-      <DependentUpon>frmPlay.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmScores.cs">
@@ -105,6 +99,9 @@
     </Compile>
     <EmbeddedResource Include="frmAddWord.resx">
       <DependentUpon>frmAddWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGame.resx">
+      <DependentUpon>frmGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>

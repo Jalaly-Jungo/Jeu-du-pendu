@@ -25,7 +25,7 @@ namespace Pendu
         {
             frmHome OrderToHome = new frmHome();//Create Form
             OrderToHome.Show();//Show new Form
-            this.Hide();//Hide Form
+            this.Close();//Close Form
         }
     }
 }
