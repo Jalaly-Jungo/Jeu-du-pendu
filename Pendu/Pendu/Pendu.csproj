@@ -71,6 +71,12 @@
       <DependentUpon>frmAddWord.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectionDB.cs" />
+    <Compile Include="frmChoiceCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChoiceCategory.Designer.cs">
+      <DependentUpon>frmChoiceCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     </Compile>
     <Compile Include="frmOrders.Designer.cs">
       <DependentUpon>frmOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlay.Designer.cs">
+      <DependentUpon>frmPlay.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
