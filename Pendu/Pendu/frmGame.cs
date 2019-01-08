@@ -12,22 +12,35 @@ namespace Pendu
 {
     public partial class frmGame : Form
     {
-        public frmGame()
+        private string s;
+
+        /// <summary>
+        /// The simple constructor without parameters
+        /// </summary>
+        public frmGame() : this("")
         {
+            
+        }
+
+        /// <summary>
+        /// The principal constructor 
+        /// </summary>
+        /// <author>JJO</author>
+        /// <param name="s">category of word</param>
+        public frmGame(string s)
+        {
+            this.s = s;
             InitializeComponent();
         }
 
-        private void cmdA_Click(object sender, EventArgs e)
+        private void frmGame_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void cmdB_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //check the char button with the letters in the word
+        /// <summary>
+        /// check the char button with the letters in the word
+        /// </summary>
         private void CharChecker()
         {
 

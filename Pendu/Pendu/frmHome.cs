@@ -20,14 +20,10 @@ namespace Pendu
             InitializeComponent();
         }
 
-        private void frmHome_Load(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// Close the game
         /// </summary>
+        /// <author>JJO</author>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void cmdClose_Click(object sender, EventArgs e)
@@ -37,6 +33,7 @@ namespace Pendu
         /// <summary>
         /// Go to orders
         /// </summary>
+        /// <author>JJO</author>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void cmdOrders_Click(object sender, EventArgs e)
@@ -47,6 +44,7 @@ namespace Pendu
         /// <summary>
         /// Go to scores
         /// </summary>
+        /// <author>JJO</author>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void cmdScores_Click(object sender, EventArgs e)
@@ -57,6 +55,7 @@ namespace Pendu
         /// <summary>
         /// Go to add word
         /// </summary>
+        /// <author>JJO</author>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void cmdAddWords_Click(object sender, EventArgs e)
@@ -64,15 +63,22 @@ namespace Pendu
             frmAddWord HomeToAddWord = new frmAddWord();//Create Form
             ChangeForm(HomeToAddWord);
         }
-
+        /// <summary>
+        /// Got to choice the category of words
+        /// </summary>
+        /// <author>JJO</author>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmdPlay_Click(object sender, EventArgs e)
         {
-
+            frmChoiceCategory HomeToChoiceCategory = new frmChoiceCategory();
+            ChangeForm(HomeToChoiceCategory);
         }
 
         /// <summary>
         /// Change the form visible
         /// </summary>
+        /// <author>JJO</author>
         /// <param name="frm"></param>
         private void ChangeForm(Form frm)
         {

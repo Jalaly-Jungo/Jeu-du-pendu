@@ -117,16 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cmdSpace.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAAAgCAYAAADkK90uAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAABV0RVh0QXV0aG9yAEFuZHJldyBNYXJjdXNl5zc3gwAAAC90RVh0U29mdHdhcmUA
-        aW5mby5maWxlZm9ybWF0LmRhdGEuVW5pY29kZVBuZ1NlcnZsZXRoAX8wAAAAF3RFWHRUaXRsZQBPUEVO
-        IEJPWCAoVSsyNDIzKWmyqwQAAACsSURBVGhD7ZE7CoBAFMS8/4nt/AwI277CMWACu+0Lk+3iuD9BkBYG
-        4WAQGAaBYRAYBoFhEBgGgWEQGAaBgQtyuzzvTVp3psSHJNUaqnVnSnxIUq2hWnemxIck1RqqdWdKfEhS
-        raFad6bEhyTVGqp1Z0p8SFLrUK1HIj4kqXWo1iMRH5LU/sEjgQvydwwCwyAwDALDIDAMAsMgMAwCwyAw
-        DALDIDAMAsMgLLbjBJ82uXt/YKi3AAAAAElFTkSuQmCC
-</value>
-  </data>
 </root>
