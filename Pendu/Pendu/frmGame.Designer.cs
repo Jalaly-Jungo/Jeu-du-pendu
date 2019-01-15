@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblIndex = new System.Windows.Forms.Label();
             this.lblNomberTry = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.txtScore = new System.Windows.Forms.TextBox();
             this.txtNumberTry = new System.Windows.Forms.TextBox();
-            this.lblInfoIndex = new System.Windows.Forms.Label();
             this.cmdA = new System.Windows.Forms.Button();
             this.cmdB = new System.Windows.Forms.Button();
             this.cmdC = new System.Windows.Forms.Button();
@@ -74,16 +72,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lblIndex
-            // 
-            this.lblIndex.AutoSize = true;
-            this.lblIndex.Location = new System.Drawing.Point(269, 279);
-            this.lblIndex.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblIndex.Name = "lblIndex";
-            this.lblIndex.Size = new System.Drawing.Size(42, 13);
-            this.lblIndex.TabIndex = 1;
-            this.lblIndex.Text = "Indice :";
-            // 
             // lblNomberTry
             // 
             this.lblNomberTry.AutoSize = true;
@@ -121,16 +109,6 @@
             this.txtNumberTry.ReadOnly = true;
             this.txtNumberTry.Size = new System.Drawing.Size(68, 20);
             this.txtNumberTry.TabIndex = 5;
-            // 
-            // lblInfoIndex
-            // 
-            this.lblInfoIndex.AutoSize = true;
-            this.lblInfoIndex.Location = new System.Drawing.Point(314, 279);
-            this.lblInfoIndex.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblInfoIndex.Name = "lblInfoIndex";
-            this.lblInfoIndex.Size = new System.Drawing.Size(35, 13);
-            this.lblInfoIndex.TabIndex = 6;
-            this.lblInfoIndex.Text = "label1";
             // 
             // cmdA
             // 
@@ -423,12 +401,10 @@
             this.Controls.Add(this.cmdC);
             this.Controls.Add(this.cmdB);
             this.Controls.Add(this.cmdA);
-            this.Controls.Add(this.lblInfoIndex);
             this.Controls.Add(this.txtNumberTry);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblNomberTry);
-            this.Controls.Add(this.lblIndex);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGame";
@@ -443,12 +419,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblIndex;
         private System.Windows.Forms.Label lblNomberTry;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.TextBox txtNumberTry;
-        private System.Windows.Forms.Label lblInfoIndex;
         private System.Windows.Forms.Button cmdA;
         private System.Windows.Forms.Button cmdB;
         private System.Windows.Forms.Button cmdC;

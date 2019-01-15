@@ -93,23 +93,23 @@ namespace Pendu
             doSqlRequestQuery("CREATE TABLE Words (idWord INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, word TEXT NOT NULL UNIQUE, discovered BOOLEAN, fkCategory INTEGER NOT NULL);");
             //Insert Word
                 //Sport
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('Football', 1)");
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('Volley-ball', 1)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Football', false, 1)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Volley-ball', false, 1)");
                 //Fruit
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('Banane', 2)");
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('Tomate', 2)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Banane', false, 2)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Tomate', false, 2)");
                 //Pierre
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('Ruby', 3)");
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('Saphir', 3)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Ruby', false, 3)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Saphir', false, 3)");
                 
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('Opel', 4)");
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('Ford', 4)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Opel', false, 4)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Ford', false, 4)");
 
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('C', 5)");
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('Wi-fi', 5)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('C', false, 5)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Wi-fi', false, 5)");
 
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('Dwayne Johnson', 6)");
-            doSqlRequestQuery("INSERT INTO Words (word, fkCategory) values('Gérard Depardieu', 6)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Dwayne Johnson', false, 6)");
+            doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Gérard Depardieu', false, 6)");
         }
 
         /// <summary>
@@ -152,6 +152,7 @@ namespace Pendu
         /// Exctract the list category of words
         /// </summary>
         /// <author>JJO</author>
+        /// <returns>Tuple int, string</returns>
         public List<Tuple<int, string>> ExtractCategory()
         {
             //list contains 2 types of value 
@@ -165,24 +166,31 @@ namespace Pendu
                 int idcat = System.Convert.ToInt32(reader["idCategory"].ToString());
                 string cat = reader["category"].ToString();
 
-                //AddToList();
+                //AddToList
                 lstCategory.Add(Tuple.Create<int , string>(idcat, cat));
             }
             return lstCategory;
         }
-        public List<string> ExctractWords(int id)
+        /// <summary>
+        /// Exctract the list words
+        /// </summary>
+        /// <author>JJO</author>
+        /// <param name="id"></param>
+        /// <returns>Tuple string, bool</returns>
+        public List<Tuple<string, bool>> ExctractWords(int id)
         {
             //list of words
-            var lstWords = new List<string>();
+            var lstWords = new List<Tuple<string, bool>>();
             //SQL Request
-            SQLiteDataReader reader = doSqlRequestReader("SELECT word, fkCategory FROM Words WHERE fkCategory =" + id);
+            SQLiteDataReader reader = doSqlRequestReader("SELECT word, discovered FROM Words WHERE fkCategory =" + id);
 
             while (reader.Read())
             {
                 string word = reader["word"].ToString();
+                bool discover = System.Convert.ToBoolean(reader["discovered"].ToString());
 
-                //AddToList();
-                lstWords.Add(word);
+                //AddToList
+                lstWords.Add(Tuple.Create<string, bool>(word,discover));
             }
             return lstWords;
         }

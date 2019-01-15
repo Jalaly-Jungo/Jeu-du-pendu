@@ -37,14 +37,14 @@ namespace Pendu
             this._s = SenderCat;
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Extract the words and load the game
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmGame_Load(object sender, EventArgs e)
         {
-            loadWords();
-        }
-
-        private string loadWords()
-        {
+            //search words
             //Split the name of button passed in parameter using the format of a number
             string[] number = Regex.Split(_s, @"\D+");
             foreach (string value in number)
@@ -56,10 +56,10 @@ namespace Pendu
                     //Console.WriteLine("Number: {0}", idCat);
                 }
             }
-            connDB.ExctractWords(idCat);
+            List<Tuple<string, bool>> words = connDB.ExctractWords(idCat);
 
+            //create TextBox
 
-            return "";
         }
 
         /// <summary>
