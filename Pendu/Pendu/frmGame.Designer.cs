@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGame));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblIndex = new System.Windows.Forms.Label();
             this.lblNomberTry = new System.Windows.Forms.Label();
@@ -62,7 +61,6 @@
             this.cmdX = new System.Windows.Forms.Button();
             this.cmdY = new System.Windows.Forms.Button();
             this.cmdZ = new System.Windows.Forms.Button();
-            this.cmdSpace = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +68,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(8, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(226, 399);
             this.pictureBox1.TabIndex = 0;
@@ -79,7 +77,7 @@
             // lblIndex
             // 
             this.lblIndex.AutoSize = true;
-            this.lblIndex.Location = new System.Drawing.Point(238, 229);
+            this.lblIndex.Location = new System.Drawing.Point(269, 279);
             this.lblIndex.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIndex.Name = "lblIndex";
             this.lblIndex.Size = new System.Drawing.Size(42, 13);
@@ -109,23 +107,25 @@
             // txtScore
             // 
             this.txtScore.Location = new System.Drawing.Point(566, 33);
-            this.txtScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(2);
             this.txtScore.Name = "txtScore";
+            this.txtScore.ReadOnly = true;
             this.txtScore.Size = new System.Drawing.Size(68, 20);
             this.txtScore.TabIndex = 4;
             // 
             // txtNumberTry
             // 
             this.txtNumberTry.Location = new System.Drawing.Point(566, 9);
-            this.txtNumberTry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumberTry.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumberTry.Name = "txtNumberTry";
+            this.txtNumberTry.ReadOnly = true;
             this.txtNumberTry.Size = new System.Drawing.Size(68, 20);
             this.txtNumberTry.TabIndex = 5;
             // 
             // lblInfoIndex
             // 
             this.lblInfoIndex.AutoSize = true;
-            this.lblInfoIndex.Location = new System.Drawing.Point(283, 229);
+            this.lblInfoIndex.Location = new System.Drawing.Point(314, 279);
             this.lblInfoIndex.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInfoIndex.Name = "lblInfoIndex";
             this.lblInfoIndex.Size = new System.Drawing.Size(35, 13);
@@ -134,8 +134,8 @@
             // 
             // cmdA
             // 
-            this.cmdA.Location = new System.Drawing.Point(253, 262);
-            this.cmdA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdA.Location = new System.Drawing.Point(284, 312);
+            this.cmdA.Margin = new System.Windows.Forms.Padding(2);
             this.cmdA.Name = "cmdA";
             this.cmdA.Size = new System.Drawing.Size(20, 19);
             this.cmdA.TabIndex = 7;
@@ -144,8 +144,8 @@
             // 
             // cmdB
             // 
-            this.cmdB.Location = new System.Drawing.Point(277, 262);
-            this.cmdB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdB.Location = new System.Drawing.Point(308, 312);
+            this.cmdB.Margin = new System.Windows.Forms.Padding(2);
             this.cmdB.Name = "cmdB";
             this.cmdB.Size = new System.Drawing.Size(20, 19);
             this.cmdB.TabIndex = 8;
@@ -154,8 +154,8 @@
             // 
             // cmdC
             // 
-            this.cmdC.Location = new System.Drawing.Point(300, 263);
-            this.cmdC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdC.Location = new System.Drawing.Point(331, 313);
+            this.cmdC.Margin = new System.Windows.Forms.Padding(2);
             this.cmdC.Name = "cmdC";
             this.cmdC.Size = new System.Drawing.Size(20, 19);
             this.cmdC.TabIndex = 9;
@@ -164,8 +164,8 @@
             // 
             // cmdD
             // 
-            this.cmdD.Location = new System.Drawing.Point(324, 263);
-            this.cmdD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdD.Location = new System.Drawing.Point(355, 313);
+            this.cmdD.Margin = new System.Windows.Forms.Padding(2);
             this.cmdD.Name = "cmdD";
             this.cmdD.Size = new System.Drawing.Size(20, 19);
             this.cmdD.TabIndex = 10;
@@ -174,8 +174,8 @@
             // 
             // cmdE
             // 
-            this.cmdE.Location = new System.Drawing.Point(348, 262);
-            this.cmdE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdE.Location = new System.Drawing.Point(379, 312);
+            this.cmdE.Margin = new System.Windows.Forms.Padding(2);
             this.cmdE.Name = "cmdE";
             this.cmdE.Size = new System.Drawing.Size(20, 19);
             this.cmdE.TabIndex = 11;
@@ -184,8 +184,8 @@
             // 
             // cmdF
             // 
-            this.cmdF.Location = new System.Drawing.Point(372, 263);
-            this.cmdF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdF.Location = new System.Drawing.Point(403, 313);
+            this.cmdF.Margin = new System.Windows.Forms.Padding(2);
             this.cmdF.Name = "cmdF";
             this.cmdF.Size = new System.Drawing.Size(20, 19);
             this.cmdF.TabIndex = 12;
@@ -194,8 +194,8 @@
             // 
             // cmdG
             // 
-            this.cmdG.Location = new System.Drawing.Point(396, 263);
-            this.cmdG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdG.Location = new System.Drawing.Point(427, 313);
+            this.cmdG.Margin = new System.Windows.Forms.Padding(2);
             this.cmdG.Name = "cmdG";
             this.cmdG.Size = new System.Drawing.Size(20, 19);
             this.cmdG.TabIndex = 13;
@@ -204,8 +204,8 @@
             // 
             // cmdH
             // 
-            this.cmdH.Location = new System.Drawing.Point(420, 263);
-            this.cmdH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdH.Location = new System.Drawing.Point(451, 313);
+            this.cmdH.Margin = new System.Windows.Forms.Padding(2);
             this.cmdH.Name = "cmdH";
             this.cmdH.Size = new System.Drawing.Size(20, 19);
             this.cmdH.TabIndex = 14;
@@ -214,8 +214,8 @@
             // 
             // cmdI
             // 
-            this.cmdI.Location = new System.Drawing.Point(444, 262);
-            this.cmdI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdI.Location = new System.Drawing.Point(475, 312);
+            this.cmdI.Margin = new System.Windows.Forms.Padding(2);
             this.cmdI.Name = "cmdI";
             this.cmdI.Size = new System.Drawing.Size(20, 19);
             this.cmdI.TabIndex = 15;
@@ -224,8 +224,8 @@
             // 
             // cmdJ
             // 
-            this.cmdJ.Location = new System.Drawing.Point(468, 262);
-            this.cmdJ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdJ.Location = new System.Drawing.Point(499, 312);
+            this.cmdJ.Margin = new System.Windows.Forms.Padding(2);
             this.cmdJ.Name = "cmdJ";
             this.cmdJ.Size = new System.Drawing.Size(20, 19);
             this.cmdJ.TabIndex = 16;
@@ -234,8 +234,8 @@
             // 
             // cmdK
             // 
-            this.cmdK.Location = new System.Drawing.Point(492, 262);
-            this.cmdK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdK.Location = new System.Drawing.Point(523, 312);
+            this.cmdK.Margin = new System.Windows.Forms.Padding(2);
             this.cmdK.Name = "cmdK";
             this.cmdK.Size = new System.Drawing.Size(20, 19);
             this.cmdK.TabIndex = 17;
@@ -244,8 +244,8 @@
             // 
             // cmdL
             // 
-            this.cmdL.Location = new System.Drawing.Point(516, 263);
-            this.cmdL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdL.Location = new System.Drawing.Point(547, 313);
+            this.cmdL.Margin = new System.Windows.Forms.Padding(2);
             this.cmdL.Name = "cmdL";
             this.cmdL.Size = new System.Drawing.Size(20, 19);
             this.cmdL.TabIndex = 18;
@@ -254,8 +254,8 @@
             // 
             // cmdM
             // 
-            this.cmdM.Location = new System.Drawing.Point(540, 262);
-            this.cmdM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdM.Location = new System.Drawing.Point(571, 312);
+            this.cmdM.Margin = new System.Windows.Forms.Padding(2);
             this.cmdM.Name = "cmdM";
             this.cmdM.Size = new System.Drawing.Size(20, 19);
             this.cmdM.TabIndex = 19;
@@ -264,8 +264,8 @@
             // 
             // cmdN
             // 
-            this.cmdN.Location = new System.Drawing.Point(253, 286);
-            this.cmdN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdN.Location = new System.Drawing.Point(284, 336);
+            this.cmdN.Margin = new System.Windows.Forms.Padding(2);
             this.cmdN.Name = "cmdN";
             this.cmdN.Size = new System.Drawing.Size(20, 19);
             this.cmdN.TabIndex = 20;
@@ -274,8 +274,8 @@
             // 
             // cmdO
             // 
-            this.cmdO.Location = new System.Drawing.Point(277, 286);
-            this.cmdO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdO.Location = new System.Drawing.Point(308, 336);
+            this.cmdO.Margin = new System.Windows.Forms.Padding(2);
             this.cmdO.Name = "cmdO";
             this.cmdO.Size = new System.Drawing.Size(20, 19);
             this.cmdO.TabIndex = 21;
@@ -284,8 +284,8 @@
             // 
             // cmdP
             // 
-            this.cmdP.Location = new System.Drawing.Point(300, 286);
-            this.cmdP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdP.Location = new System.Drawing.Point(331, 336);
+            this.cmdP.Margin = new System.Windows.Forms.Padding(2);
             this.cmdP.Name = "cmdP";
             this.cmdP.Size = new System.Drawing.Size(20, 19);
             this.cmdP.TabIndex = 22;
@@ -294,8 +294,8 @@
             // 
             // cmdQ
             // 
-            this.cmdQ.Location = new System.Drawing.Point(324, 286);
-            this.cmdQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdQ.Location = new System.Drawing.Point(355, 336);
+            this.cmdQ.Margin = new System.Windows.Forms.Padding(2);
             this.cmdQ.Name = "cmdQ";
             this.cmdQ.Size = new System.Drawing.Size(20, 19);
             this.cmdQ.TabIndex = 23;
@@ -304,8 +304,8 @@
             // 
             // cmdR
             // 
-            this.cmdR.Location = new System.Drawing.Point(348, 286);
-            this.cmdR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdR.Location = new System.Drawing.Point(379, 336);
+            this.cmdR.Margin = new System.Windows.Forms.Padding(2);
             this.cmdR.Name = "cmdR";
             this.cmdR.Size = new System.Drawing.Size(20, 19);
             this.cmdR.TabIndex = 24;
@@ -314,8 +314,8 @@
             // 
             // cmdS
             // 
-            this.cmdS.Location = new System.Drawing.Point(372, 286);
-            this.cmdS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdS.Location = new System.Drawing.Point(403, 336);
+            this.cmdS.Margin = new System.Windows.Forms.Padding(2);
             this.cmdS.Name = "cmdS";
             this.cmdS.Size = new System.Drawing.Size(20, 19);
             this.cmdS.TabIndex = 25;
@@ -324,8 +324,8 @@
             // 
             // cmdT
             // 
-            this.cmdT.Location = new System.Drawing.Point(396, 286);
-            this.cmdT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdT.Location = new System.Drawing.Point(427, 336);
+            this.cmdT.Margin = new System.Windows.Forms.Padding(2);
             this.cmdT.Name = "cmdT";
             this.cmdT.Size = new System.Drawing.Size(20, 19);
             this.cmdT.TabIndex = 26;
@@ -334,8 +334,8 @@
             // 
             // cmdU
             // 
-            this.cmdU.Location = new System.Drawing.Point(420, 286);
-            this.cmdU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdU.Location = new System.Drawing.Point(451, 336);
+            this.cmdU.Margin = new System.Windows.Forms.Padding(2);
             this.cmdU.Name = "cmdU";
             this.cmdU.Size = new System.Drawing.Size(20, 19);
             this.cmdU.TabIndex = 27;
@@ -344,8 +344,8 @@
             // 
             // cmdV
             // 
-            this.cmdV.Location = new System.Drawing.Point(444, 286);
-            this.cmdV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdV.Location = new System.Drawing.Point(475, 336);
+            this.cmdV.Margin = new System.Windows.Forms.Padding(2);
             this.cmdV.Name = "cmdV";
             this.cmdV.Size = new System.Drawing.Size(20, 19);
             this.cmdV.TabIndex = 28;
@@ -354,8 +354,8 @@
             // 
             // cmdW
             // 
-            this.cmdW.Location = new System.Drawing.Point(468, 286);
-            this.cmdW.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdW.Location = new System.Drawing.Point(499, 336);
+            this.cmdW.Margin = new System.Windows.Forms.Padding(2);
             this.cmdW.Name = "cmdW";
             this.cmdW.Size = new System.Drawing.Size(20, 19);
             this.cmdW.TabIndex = 29;
@@ -364,8 +364,8 @@
             // 
             // cmdX
             // 
-            this.cmdX.Location = new System.Drawing.Point(492, 286);
-            this.cmdX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdX.Location = new System.Drawing.Point(523, 336);
+            this.cmdX.Margin = new System.Windows.Forms.Padding(2);
             this.cmdX.Name = "cmdX";
             this.cmdX.Size = new System.Drawing.Size(20, 19);
             this.cmdX.TabIndex = 30;
@@ -374,8 +374,8 @@
             // 
             // cmdY
             // 
-            this.cmdY.Location = new System.Drawing.Point(516, 287);
-            this.cmdY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdY.Location = new System.Drawing.Point(547, 337);
+            this.cmdY.Margin = new System.Windows.Forms.Padding(2);
             this.cmdY.Name = "cmdY";
             this.cmdY.Size = new System.Drawing.Size(20, 19);
             this.cmdY.TabIndex = 31;
@@ -384,30 +384,19 @@
             // 
             // cmdZ
             // 
-            this.cmdZ.Location = new System.Drawing.Point(540, 287);
-            this.cmdZ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdZ.Location = new System.Drawing.Point(571, 337);
+            this.cmdZ.Margin = new System.Windows.Forms.Padding(2);
             this.cmdZ.Name = "cmdZ";
             this.cmdZ.Size = new System.Drawing.Size(20, 19);
             this.cmdZ.TabIndex = 32;
             this.cmdZ.Text = "Z";
             this.cmdZ.UseVisualStyleBackColor = true;
             // 
-            // cmdSpace
-            // 
-            this.cmdSpace.Image = ((System.Drawing.Image)(resources.GetObject("cmdSpace.Image")));
-            this.cmdSpace.Location = new System.Drawing.Point(365, 310);
-            this.cmdSpace.Name = "cmdSpace";
-            this.cmdSpace.Size = new System.Drawing.Size(75, 23);
-            this.cmdSpace.TabIndex = 33;
-            this.cmdSpace.Text = " ";
-            this.cmdSpace.UseVisualStyleBackColor = true;
-            // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 418);
-            this.Controls.Add(this.cmdSpace);
             this.Controls.Add(this.cmdZ);
             this.Controls.Add(this.cmdY);
             this.Controls.Add(this.cmdX);
@@ -441,7 +430,7 @@
             this.Controls.Add(this.lblNomberTry);
             this.Controls.Add(this.lblIndex);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGame";
             this.Text = "frmGame";
             this.Load += new System.EventHandler(this.frmGame_Load);
@@ -486,6 +475,5 @@
         private System.Windows.Forms.Button cmdX;
         private System.Windows.Forms.Button cmdY;
         private System.Windows.Forms.Button cmdZ;
-        private System.Windows.Forms.Button cmdSpace;
     }
 }

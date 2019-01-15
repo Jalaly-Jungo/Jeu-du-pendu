@@ -28,7 +28,8 @@ namespace Pendu
         /// <param name="e"></param>
         private void cmdClose_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            Environment.Exit(1);
         }
         /// <summary>
         /// Go to orders

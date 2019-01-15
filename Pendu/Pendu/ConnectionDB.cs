@@ -14,6 +14,8 @@ namespace Pendu
     {
         //connection to the database
         private SQLiteConnection m_dbConnection;
+        //for exctract category in Tuple list
+        private int idcat;
 
         /// <summary>
         /// if File exist return false
@@ -150,17 +152,39 @@ namespace Pendu
         /// Exctract the list category of words
         /// </summary>
         /// <author>JJO</author>
-        public List<String> ExtractCategory()
+        public List<Tuple<int, string>> ExtractCategory()
         {
-            List<String> category = new List<string>();
-
-            SQLiteDataReader reader = doSqlRequestReader("SELECT category FROM Category");
+            //list contains 2 types of value 
+            var lstCategory = new List<Tuple<int, string>>();
+            //SQL Request
+            SQLiteDataReader reader = doSqlRequestReader("SELECT idCategory, category FROM Category");
 
             while (reader.Read())
             {
-                category.Add(reader["category"].ToString());
+                //Convert value
+                int idcat = System.Convert.ToInt32(reader["idCategory"].ToString());
+                string cat = reader["category"].ToString();
+
+                //AddToList();
+                lstCategory.Add(Tuple.Create<int , string>(idcat, cat));
             }
-            return category;
+            return lstCategory;
+        }
+        public List<string> ExctractWords(int id)
+        {
+            //list of words
+            var lstWords = new List<string>();
+            //SQL Request
+            SQLiteDataReader reader = doSqlRequestReader("SELECT word, fkCategory FROM Words WHERE fkCategory =" + id);
+
+            while (reader.Read())
+            {
+                string word = reader["word"].ToString();
+
+                //AddToList();
+                lstWords.Add(word);
+            }
+            return lstWords;
         }
     }
 }
