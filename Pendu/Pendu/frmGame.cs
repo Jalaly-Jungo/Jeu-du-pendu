@@ -56,10 +56,35 @@ namespace Pendu
                     //Console.WriteLine("Number: {0}", idCat);
                 }
             }
-            List<Tuple<string, bool>> words = connDB.ExctractWords(idCat);
 
-            //create TextBox
+            List<Tuple<string, bool>> lstWords = connDB.ExctractWords(idCat);
+            int i = 0;
 
+            //extract all words
+            //stocker dans un tableau afin de les parcourir 
+            foreach (Tuple<string, bool> words in lstWords)
+            {
+                var array = words.Item1.ToCharArray();
+            }
+
+            //split the letters of one word
+            //ATTENTION l'espace n'existe pas dans le clavier visuelle
+
+
+            //Create textBox with letters but value invisible
+            foreach (Tuple<string, bool> words in lstWords)
+            {
+                string Word1 = "";
+                i++;
+                if (words.Item2 == false)
+                {
+                    var textbox = new TextBox();
+                    Console.WriteLine("txt" + (words.Item1.Substring(0,i))+"\n");
+                    //textbox.Name = "txt"+ (words.Item1.Substring(i));
+                    textbox.Location = new Point(textbox.Width * i + 5, 200);
+                    Controls.Add(textbox);//Add button on form
+                }
+            }
         }
 
         /// <summary>

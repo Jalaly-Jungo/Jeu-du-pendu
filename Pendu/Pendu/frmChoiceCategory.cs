@@ -38,7 +38,7 @@ namespace Pendu
             {
                 i++;
                 var button = new Button();//create button
-                button.Location = new Point(button.Width * i + 4, 0);
+                button.Location = new Point(button.Width * i + 5, 0);
                 button.Name = "cmd"+cat.Item2.ToString()+cat.Item1.ToString();
                 button.Text = cat.Item2.ToString();
                 Controls.Add(button);//Add button on form
