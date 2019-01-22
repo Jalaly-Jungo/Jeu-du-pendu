@@ -38,6 +38,11 @@ namespace Pendu
 
         }
 
+        private void frmAddWord_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (txtAddWord.Text == "")

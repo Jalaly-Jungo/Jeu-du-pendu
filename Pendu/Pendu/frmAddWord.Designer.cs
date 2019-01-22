@@ -121,6 +121,7 @@
             this.Controls.Add(this.cmdAddWordsToHome);
             this.Name = "frmAddWord";
             this.Text = "AddWord";
+            this.Load += new System.EventHandler(this.frmAddWord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
