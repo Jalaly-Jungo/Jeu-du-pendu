@@ -33,8 +33,7 @@
             this.lblAddWord = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
             this.btnSend = new System.Windows.Forms.Button();
-            this.lblAdvertissment = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstCategory = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // cmdAddWordsToHome
@@ -65,7 +64,6 @@
             this.lblAddWord.Size = new System.Drawing.Size(125, 25);
             this.lblAddWord.TabIndex = 3;
             this.lblAddWord.Text = "Mot à ajouter";
-            this.lblAddWord.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblCategory
             // 
@@ -87,33 +85,20 @@
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // lblAdvertissment
+            // lstCategory
             // 
-            this.lblAdvertissment.AutoSize = true;
-            this.lblAdvertissment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdvertissment.Location = new System.Drawing.Point(335, 243);
-            this.lblAdvertissment.Name = "lblAdvertissment";
-            this.lblAdvertissment.Size = new System.Drawing.Size(64, 25);
-            this.lblAdvertissment.TabIndex = 6;
-            this.lblAdvertissment.Text = "label1";
-            this.lblAdvertissment.Visible = false;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(398, 110);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 7;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lstCategory.FormattingEnabled = true;
+            this.lstCategory.Location = new System.Drawing.Point(398, 110);
+            this.lstCategory.Name = "lstCategory";
+            this.lstCategory.Size = new System.Drawing.Size(120, 95);
+            this.lstCategory.TabIndex = 7;
             // 
             // frmAddWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.lblAdvertissment);
+            this.Controls.Add(this.lstCategory);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.lblAddWord);
@@ -134,7 +119,6 @@
         private System.Windows.Forms.Label lblAddWord;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Label lblAdvertissment;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstCategory;
     }
 }

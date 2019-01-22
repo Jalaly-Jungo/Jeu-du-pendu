@@ -28,15 +28,6 @@ namespace Pendu
             this.Close();//Close Form
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void frmAddWord_Load(object sender, EventArgs e)
         {
