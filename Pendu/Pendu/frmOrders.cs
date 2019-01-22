@@ -27,5 +27,11 @@ namespace Pendu
             OrderToHome.Show();//Show new Form
             this.Close();//Close Form
         }
+
+        private void frmOrders_Load(object sender, EventArgs e)
+        {
+            rtbOrders.Text = "Vous devez essayer de deviner le mot généré aléatoirement par le programme en mettant les bonnes lettres.";
+            rtbOrders.Enabled = false;
+        }
     }
 }

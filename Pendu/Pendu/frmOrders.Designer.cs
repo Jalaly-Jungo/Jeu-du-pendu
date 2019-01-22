@@ -30,6 +30,8 @@
         {
             this.cmdOrdersBackHome = new System.Windows.Forms.Button();
             this.lblOrder = new System.Windows.Forms.Label();
+            this.rtbOrders = new System.Windows.Forms.RichTextBox();
+            this.sqLiteCommandBuilder1 = new System.Data.SQLite.SQLiteCommandBuilder();
             this.SuspendLayout();
             // 
             // cmdOrdersBackHome
@@ -53,17 +55,33 @@
             this.lblOrder.TabIndex = 1;
             this.lblOrder.Text = "Consignes";
             // 
-            // Orders
+            // rtbOrders
+            // 
+            this.rtbOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbOrders.Location = new System.Drawing.Point(13, 86);
+            this.rtbOrders.Name = "rtbOrders";
+            this.rtbOrders.Size = new System.Drawing.Size(734, 250);
+            this.rtbOrders.TabIndex = 2;
+            this.rtbOrders.Text = "";
+            // 
+            // sqLiteCommandBuilder1
+            // 
+            this.sqLiteCommandBuilder1.DataAdapter = null;
+            this.sqLiteCommandBuilder1.QuoteSuffix = "]";
+            // 
+            // frmOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 411);
+            this.Controls.Add(this.rtbOrders);
             this.Controls.Add(this.lblOrder);
             this.Controls.Add(this.cmdOrdersBackHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Orders";
+            this.Name = "frmOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consigne";
+            this.Load += new System.EventHandler(this.frmOrders_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,5 +91,7 @@
 
         private System.Windows.Forms.Button cmdOrdersBackHome;
         private System.Windows.Forms.Label lblOrder;
+        private System.Windows.Forms.RichTextBox rtbOrders;
+        private System.Data.SQLite.SQLiteCommandBuilder sqLiteCommandBuilder1;
     }
 }
