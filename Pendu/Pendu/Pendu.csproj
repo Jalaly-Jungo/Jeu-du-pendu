@@ -67,6 +67,12 @@
       <DependentUpon>frmAddWord.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectionDB.cs" />
+    <Compile Include="frmChoiceCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChoiceCategory.Designer.cs">
+      <DependentUpon>frmChoiceCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
     <EmbeddedResource Include="frmAddWord.resx">
       <DependentUpon>frmAddWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChoiceCategory.resx">
+      <DependentUpon>frmChoiceCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGame.resx">
       <DependentUpon>frmGame.cs</DependentUpon>

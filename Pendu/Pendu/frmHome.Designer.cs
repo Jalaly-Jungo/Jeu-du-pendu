@@ -108,7 +108,6 @@
             this.Controls.Add(this.lblNameGame);
             this.Name = "frmHome";
             this.Text = "Jeu du pendu";
-            this.Load += new System.EventHandler(this.frmHome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
