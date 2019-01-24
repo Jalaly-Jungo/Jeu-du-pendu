@@ -44,6 +44,12 @@ namespace Pendu
         /// <param name="e"></param>
         private void frmGame_Load(object sender, EventArgs e)
         {
+            List<Tuple<string, bool>> lstWords = connDB.ExctractWords(idCat);
+
+            ReadWords(lstWords);
+
+            /*
+
             //search words
             //Split the name of button passed in parameter using the format of a number
             string[] number = Regex.Split(_s, @"\D+");
@@ -57,7 +63,7 @@ namespace Pendu
                 }
             }
 
-            List<Tuple<string, bool>> lstWords = connDB.ExctractWords(idCat);
+            //List<Tuple<string, bool>> lstWords = connDB.ExctractWords(idCat);
             int i = 0;
 
             //extract all words
@@ -74,7 +80,6 @@ namespace Pendu
             //Create textBox with letters but value invisible
             foreach (Tuple<string, bool> words in lstWords)
             {
-                string Word1 = "";
                 i++;
                 if (words.Item2 == false)
                 {
@@ -85,13 +90,26 @@ namespace Pendu
                     Controls.Add(textbox);//Add button on form
                 }
             }
+            */
         }
-
-        /// <summary>
-        /// check the char button with the letters in the word
-        /// </summary>
-        private void CharChecker()
+        public void ReadWords(List<Tuple<string, bool>> lstWords)
         {
+            List<string> words = new List<string>();
+
+            foreach (var lst in lstWords)
+            {
+                string word = lst.Item1;
+                words.Add(word);
+            }
+
+            for (int i = 0; i < words[0].Length; i++)
+            {
+                TextBox textBox = new TextBox();
+                this.Controls.Add(textBox);
+                textBox.SetBounds(i * 50, 100, 50, 50);
+
+                Console.WriteLine(words[0].Substring(i, 1));
+            }
 
         }
     }
