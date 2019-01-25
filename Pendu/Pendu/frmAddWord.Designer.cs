@@ -90,7 +90,7 @@
             this.lstCategory.FormattingEnabled = true;
             this.lstCategory.Location = new System.Drawing.Point(398, 110);
             this.lstCategory.Name = "lstCategory";
-            this.lstCategory.Size = new System.Drawing.Size(120, 95);
+            this.lstCategory.Size = new System.Drawing.Size(120, 121);
             this.lstCategory.TabIndex = 7;
             // 
             // frmAddWord

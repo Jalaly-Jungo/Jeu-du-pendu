@@ -74,7 +74,7 @@ namespace Pendu
             //Create textBox with letters but value invisible
             foreach (Tuple<string, bool> words in lstWords)
             {
-                string Word1 = "";
+                //string Word1 = "";
                 i++;
                 if (words.Item2 == false)
                 {

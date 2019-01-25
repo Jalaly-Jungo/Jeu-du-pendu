@@ -14,8 +14,6 @@ namespace Pendu
     {
         //connection to the database
         private SQLiteConnection m_dbConnection;
-        //for exctract category in Tuple list
-        private int idcat;
 
         /// <summary>
         /// if File exist return false
@@ -66,7 +64,7 @@ namespace Pendu
         /// </summary>
         /// Inspired by Benoit Meylan (Splendor)
         /// <param name="sql"> SQL request</param>
-        public void doSqlRequestQuery(string sql)
+        private void doSqlRequestQuery(string sql)
         {
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
@@ -76,7 +74,7 @@ namespace Pendu
         /// </summary>
         /// <author>JJO</author>
         /// <param name="sql"></param>
-        public SQLiteDataReader doSqlRequestReader(string sql)
+        private SQLiteDataReader doSqlRequestReader(string sql)
         {
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             SQLiteDataReader reader = command.ExecuteReader();
@@ -92,16 +90,16 @@ namespace Pendu
             //create table of Words
             doSqlRequestQuery("CREATE TABLE Words (idWord INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, word TEXT NOT NULL UNIQUE, discovered BOOLEAN, fkCategory INTEGER NOT NULL);");
             //Insert Word
-                //Sport
+            //Sport
             doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Football', false, 1)");
             doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Volley-ball', false, 1)");
-                //Fruit
+            //Fruit
             doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Banane', false, 2)");
             doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Tomate', false, 2)");
-                //Pierre
+            //Pierre
             doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Ruby', false, 3)");
             doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Saphir', false, 3)");
-                
+
             doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Opel', false, 4)");
             doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values('Ford', false, 4)");
 
@@ -113,13 +111,14 @@ namespace Pendu
         }
 
         /// <summary>
-        /// create the table "Words" and insert data
+        /// create the table "Categories" and insert data
         /// </summary>
         /// <author>JJO</author>
         private void CreateInsertCategory()
         {
             //create table of Category
             doSqlRequestQuery("CREATE TABLE Category (idCategory INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, category TEXT NOT NULL);");
+
             //Insert Category
             doSqlRequestQuery("INSERT INTO Category (category) values('Sport')");
             doSqlRequestQuery("INSERT INTO Category (category) values('Fruit')");
@@ -127,6 +126,7 @@ namespace Pendu
             doSqlRequestQuery("INSERT INTO Category (category) values('Voiture')");
             doSqlRequestQuery("INSERT INTO Category (category) values('IT')");
             doSqlRequestQuery("INSERT INTO Category (category) values('Célébrité')");
+            doSqlRequestQuery("INSERT INTO Category (category) values('Autres')");
         }
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace Pendu
                 string cat = reader["category"].ToString();
 
                 //AddToList
-                lstCategory.Add(Tuple.Create<int , string>(idcat, cat));
+                lstCategory.Add(Tuple.Create<int, string>(idcat, cat));
             }
             return lstCategory;
         }
@@ -190,9 +190,26 @@ namespace Pendu
                 bool discover = System.Convert.ToBoolean(reader["discovered"].ToString());
 
                 //AddToList
-                lstWords.Add(Tuple.Create<string, bool>(word,discover));
+                lstWords.Add(Tuple.Create<string, bool>(word, discover));
             }
             return lstWords;
+        }
+        /// <summary>
+        ///  Method to add 
+        /// </summary>
+        /// <author> EJY</author>
+        /// <param name="word"></param>
+        /// <param name="category"></param>
+        public void Addword (string oneword, int category)
+        {
+            try
+            {
+                doSqlRequestQuery("INSERT INTO Words (word, discovered, fkCategory) values(" + "'" + oneword + "'" + "," + false + "," + category + ")");
+            }
+            catch
+            {
+                
+            }
         }
     }
 }
