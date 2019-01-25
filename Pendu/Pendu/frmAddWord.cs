@@ -85,7 +85,6 @@ namespace Pendu
         /// <author>EJY</author>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-       
         private void txtAddWord_KeyPress(object sender, KeyPressEventArgs e)
         {
             //
